@@ -25,6 +25,36 @@ public enum CurrencyType {
     }
 
     public static CurrencyType getTypeOfCurrency(ConvertableCurrency currency) {
+
+        switch (currency.getClass().getSimpleName().toUpperCase()){
+            case "YEN":
+                return YEN;
+            case "AUSTRALIANDOLLAR":
+                return AUSTRALIAN_DOLLAR;
+            case "CANADIANDOLLAR":
+                return CANADIAN_DOLLAR;
+            case  "CHINESEYR":
+                return CHINESE_YR;
+            case "EURO" :
+             return    EURO;
+            case "FRANC":
+              return  FRANC;
+            case "POUND":
+                return POUND;
+            case "RINGGIT":
+                return RINGGIT;
+            case "RUPEE":
+                 return   RUPEE;
+            case  "SINGAPOREDOLLAR":
+                 return  SINGAPORE_DOLLAR;
+            case "USDOLLAR":
+             return US_DOLLAR;
+            case "UNIVERSALCURRENCY":
+             return   UNIVERSAL_CURRENCY;
+
+
+
+        }
         return null;
     }
 }
